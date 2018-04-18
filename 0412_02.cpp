@@ -3,18 +3,18 @@
 
 using namespace std;
 
-void report(const char* cstr){
-    for(int i = 0; cstr [i] != '\0'; i++){
-        cout << '[' << i << "]: " << cstr[i] << endl;
-    }
-}
 
 int main(){
-    char cstr1[] = "hello, world";
+    cout << "OK?(y/n)\n";
+    string str;
+    cin >> str; //標準入力から文字列を読み込む
 
-    string str = cstr1;
-    cout << str.size() << endl;
+    if(str == "y"){
+        cout << "yが入力されました。\n";
+    }else if(str == "n"){
+        cout << "nが入力されました。\n";
+    }else{
+        cout << "不正な入力です。\n";
+    }
 
-    const char* cstr2 = str.c_str();
-    report(cstr2);
 }
